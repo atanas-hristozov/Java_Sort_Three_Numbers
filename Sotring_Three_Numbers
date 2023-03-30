@@ -1,0 +1,36 @@
+import java.util.Scanner;
+import java.util.SimpleTimeZone;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Insert the first number");
+        String input1 = scanner.nextLine();
+        int a = Integer.parseInt(input1);
+        System.out.println("Insert the second number");
+        String input2 = scanner.nextLine();
+        int b = Integer.parseInt(input2);
+        System.out.println("Insert the third number");
+        String input3 = scanner.nextLine();
+        int c = Integer.parseInt(input3);
+        if (a >= b && a >= c) {
+            if (b >= c) {
+                System.out.println(a + " " + b + " " + c);
+            } else {
+                System.out.println(a + " " + c + " " + b);
+            }
+        } else if (b >= a && b >= c) {
+            if (a >= c) {
+                System.out.println(b + " " + a + " " + c);
+            } else {
+                System.out.println(b + " " + c + " " + a);
+            }
+        } else {
+            if (a >= b) {
+                System.out.println(c + " " + a + " " + b);
+            } else {
+                System.out.println(c + " " + b + " " + a);
+            }
+        }
+    }
+}
